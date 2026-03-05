@@ -16,7 +16,7 @@ public class medianArrays {
         int i = 0;
         int j = 0;
         int k = 0;
-        while (i < n && j < m) {
+        while (i < m && j < n) {
             if (n1[i] < n2[j]) {
                 merge[k++] = n1[i++];
             } else {
@@ -25,12 +25,12 @@ public class medianArrays {
         }
 
             while (i < n) merge[k++] = n1[i++];
-            while (j < m) merge[k++] = n1[j++];
+            while (j < m) merge[k++] = n2[j++];
 
             int m1 = merge.length;
-
+        System.out.println(Arrays.toString(merge));
             if (m1 % 2 == 0) {
-                int result = (merge[(m1 / 2) - 1] + merge[m1 / 2]);
+                double result = (merge[(m1 / 2) - 1] + merge[m1 / 2]) / 2.0;
                 System.out.println(result);
             } else {
                 int result = merge[m1 / 2];
