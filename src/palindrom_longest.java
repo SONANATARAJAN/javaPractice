@@ -23,5 +23,7 @@ public class palindrom_longest {
             }
         }
         System.out.println("good " + longest);
+        System.out.println("good " + longest);
+
     }
 }
